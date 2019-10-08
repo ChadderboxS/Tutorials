@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AGORA Valuation Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body style="width:60%; margin-left:20%;">
+    <h1 class="text-center">AGORA Valuation Model</h1>
+    <form action="/" method="post">
+        <lable>
+            Principal Balance:
+            <input class="form-control" type="text" name="principal_balance" placeholder="Principal Balance">
+        </lable>
+        <lable>
+            Principal Paid to Date:
+            <input class="form-control" type="text" name="principal_ptd" placeholder="Principal PTD">
+        </lable>
+        <lable>
+            Down Payment:
+            <input class="form-control" type="text" name="down" placeholder="Down Payment">
+        </lable>
+        <lable>
+            NADA Value:
+            <input class="form-control" type="text" name="NADA" placeholder="NADA Value">
+        </lable>
+        <lable>
+            Finance Charge:
+            <input class="form-control" type="text" name="finance_charge" placeholder="Finance Charge">
+        </lable>
+        <lable>
+            Loan Term (in months):
+            <input class="form-control" type="text" name="term" placeholder="Term (months)">
+        </lable>
+        <lable>
+            Seasoning (in months):
+            <input class="form-control" type="text" name="seasoning" placeholder="Seasoning (months)">
+        </lable>
+        <lable>
+            Day's Past Due:
+            <input class="form-control" type="text" name="DPD" placeholder="Negative value for days current">
+        </lable>
+        <lable>
+            <b>OR</b> Enter string separated by spaces:
+            <input class="form-control" type="text" name="text" placeholder="Text">
+        </lable>
+        <input class="btn btn-primary" type="submit" value="Make prediction">
+    </form>
+    {% if value %}
+        <p>The predicted value of this loan is: ${{value}} on the dollar</p>
+    {% endif %}
+</body>
+</html>

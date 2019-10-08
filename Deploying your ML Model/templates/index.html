@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body style="width:60%; margin-left:20%;">
-    <h1 class="text-center">US Airline Sentiment Analysis</h1>
+    <h1 class="text-center">AGORA Valuation Model</h1>
     <form action="/" method="post">
         <input class="form-control" type="text" name="text" placeholder="Text">
         <input class="btn btn-primary" type="submit" value="Make prediction">
     </form>
     {% if sentiment %}
-        <p>The sentiment of the text is: {{sentiment}}</p>
+        <p>The predicted value of this loan is: {{value}}%</p>
     {% endif %}
 </body>
 </html>
